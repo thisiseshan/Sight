@@ -106,7 +106,6 @@ scipy
 seaborn
 setuptools
 six
-sklearn
 smmap
 soupsieve
 SpeechRecognition
