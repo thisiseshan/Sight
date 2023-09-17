@@ -24,12 +24,12 @@ Imagine a world where the visually impaired don't just recognize objects but als
 4) Scalable and Efficient: With Pinecone's vector database, ensure smooth and efficient data retrieval for a better user experience.
 
 
-## Applications
+## Applications and Future
 
-Most important: Assist visually impaired people in daily activities and help them commute and avoid objects for safety.
+**Most important:** Assist visually impaired people in daily activities and help them commute and avoid objects for safety.
 
 1) Daily Commute: Aid users as they walk on the streets, pointing out obstacles, signages, or even familiar faces.
-2) Shopping Assistance: Recognize products, read labels, and navigate through aisles in a store.
+2) Finding your parked car while leaving the mall
 3) Home Navigation: Identify household items, read out recipes or instructions, and ensure a safe environment at home.
 4) Social Interactions: Recognize and name familiar faces in a gathering or event.
-4) Reading Support: Aid in reading out loud from books, magazines, or other printed materials.
+5) Reading Support: Aid in reading out loud from books, magazines, or other printed materials.
