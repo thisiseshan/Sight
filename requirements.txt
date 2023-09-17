@@ -79,7 +79,6 @@ protobuf
 psutil
 py-cpuinfo
 pyarrow
-PyAudio
 pydantic
 pydantic_core
 pydeck
