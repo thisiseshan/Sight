@@ -12,7 +12,6 @@ from langchain import PromptTemplate, LLMChain
 from yolo import *
 
 
-
 st.title('Sight 👁️')
 
 
@@ -71,7 +70,9 @@ for msg in msgs.messages:
 # Store in Pinecone
 add_embeddings(st.session_state.key, index)
 
-if prompt := st.chat_input():
+
+# if prompt := st.chat_input():
+if prompt:= st.chat_input():
     st.chat_message("human").write(prompt)
 
     response = llm_chain.run(prompt)
