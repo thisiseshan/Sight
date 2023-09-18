@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import numpy as np
 import cv2
+import time
 
 CONF_THRESH = 0.4
 
@@ -24,6 +25,11 @@ def yolo():
 
     my_list = [{'name': item['name'], 'pos': item['pos']} for item in items]
     print(my_list)
+
+    # cv2.imshow("Display", image)
+
+    # time.sleep(2)
+
     clean_up(cap)
     return my_list
 

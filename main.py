@@ -10,7 +10,9 @@ from langchain.chains import LLMChain
 from langchain.llms import Cohere
 from langchain import PromptTemplate, LLMChain
 from yolo import *
-
+from gtts import gTTS
+import os
+language = 'en'
 
 st.title('Sight 👁️')
 
@@ -39,7 +41,7 @@ index = Vision_GPT()
 vision_info = yolo()
 formatted_string = ', '.join(f"{key}: {item[key]}" for item in vision_info for key in item)
 template = f"""I am visually impaired, I am trying to walk with the help of my computer vision model. The computer vision model gives me all persons and objects with their position in my view. 
-Please guide me through to my destination. All objects are infront of me so I will be walking forward.  First you will list all the objects and their position, make sure you advise me on being careful if two objects are in the same are (left, right, center). Then I will ask a question, please help me in two to three sentences so I can find my way. If there is not question, then respond accordingly.
+Please guide me through to my destination. All objects are infront of me so I will be walking forward.  First you will list all the objects and their position, make sure you advise me on being careful if two objects are in the same are (left, right, center). Then I will ask a question, please help me in two to three sentences so I can find my way. Also if I ask, let me know if you see the object before. If there is not question, then respond accordingly.
 
 + {formatted_string}
 """ + """
@@ -77,6 +79,9 @@ if prompt:= st.chat_input():
 
     response = llm_chain.run(prompt)
     
+    myobj = gTTS(text=response, lang=language, slow=False)
+    myobj.save("audio.mp3")
+    os.system("afplay audio.mp3")
     st.chat_message("ai").write(response)
 
 
@@ -91,5 +96,3 @@ with view_messages:
     Contents of `st.session_state.langchain_messages`:
     """
     view_messages.json(st.session_state.langchain_messages)
-
-
